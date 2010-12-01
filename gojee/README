@@ -1,5 +1,12 @@
 Gojee Transaction Data
 
+There are 21 files in this dataset:
+"hackathon_gojee_transactions_\d?\d.psv" and
+"hackathon_gojee_items.psv"
+
+
+Gojee Transaction Data
+
 Files labeled "hackathon_gojee_transactions" represent grocery store
 transaction data for reward card users.  Each line lists one food item
 in a transaction; a transaction consists of one or more food items.

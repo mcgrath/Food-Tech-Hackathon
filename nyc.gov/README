@@ -1,0 +1,74 @@
+NYC Parks and Recreation Restaurant Data
+
+There are two files in this dataset: "Sidewalk_Cafes.txt" and "DPR_Eateries.xml"
+
+Sidewalk Cafes
+
+This is a CSV-formatted list of restaurants in New York City that have sidewalk cafes.  Each line is an entry for
+one restaurant's sidewalk cafe.  The fields are as follows:
+
+Entity Type: String showing the type of venue (this is always "SIDEWALK CAFE")
+
+Licencse Number: Integer representation of the venue's license number to operate the sidewalk cafe
+
+Sidewalk Cafe Type: String, "Enclosed" or "Unenclosed"
+
+Lic Area Sq Ft: Integer listing the number of square feet permitted by the license
+
+Entity Name: String listing the name of the entity that owns the establishment
+
+Camis Trade Name: String listing the name of the restaurant
+
+Address Bldg: String (or number) listing the "building" in the address (usually the street number)
+
+Address Street Name: String listing the name of the street in the address
+
+Address Location: String with the alternate location address, for
+example 447 Broadway might have "Between Howard and Grand Streets"
+(optional)
+
+Address City: String with the city name (for example, "New York" or
+"Brooklyn")
+
+Address State: Two-character string for the state name (usually "NY")
+
+Address Zip Code: 5-digit ZIP code
+
+Camis Phone Number: 10-digit phone number
+
+
+
+Department of Parks and Recreation Eateries
+
+This is an XML-formatted document listing all restaurants and cafes in
+New York City parks operated by the Department of Parks and
+Recreation.  It has the following structure:
+
+The root tag for the document is "<eateries>" which encloses a "<facilities>" child tag.
+Each eatery is defined inside the row tag "<facility>" and has the following elements:
+
+
+
+<name>: String listing the name of the establishment
+
+<location>: String listing the name of the park
+
+<park_id>: Internal alphanumeric code for the park
+
+<start_date>: Date string for the start of the venue's contract, in "YYYY-mm-DD" format
+
+<end_date>: Date string for the end of the venue's contract, in "YYYY-mm-DD" format
+
+<description>: String describing the location, the venue, or the menu (optional)
+
+<permit_number>: Alphanumeric code for the department's permit number for the given venue
+
+<lat>: decimal coordinate representation of the latitude (-90 to 90)
+
+<long>: decimal coordinate representation of the longitude (-90 to 90)
+
+<phone>: ten-digit phone number (optional)
+
+<website>: URL for the venue's website (optional)
+
+<type_name>: string describing the type of venue (e.g., "Breakfast Cart")
