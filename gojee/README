@@ -1,16 +1,80 @@
 Gojee Transaction Data
 
-These files represent grocery store transaction data for reward card users.  Each line lists one food item in a
-transaction; a transaction consists of one or more food items.  Food items are in pipe-separated variable format,
-with the following values:
+Files labeled "hackathon_gojee_transactions" represent grocery store
+transaction data for reward card users.  Each line lists one food item
+in a transaction; a transaction consists of one or more food items.
+Food items are in pipe-separated variable format, with the following
+values:
 
-Transaction ID: a 10-digit integer representing the transaction
-Item Sequence Number: an integer indicating the position of the given food item in the transaction.  A transaction ID and an item sequence number form a unique value.
-Reward Card Number: a 19-digit integer representing a customer's reward card number
-Store ID: an integer representing the store where the transaction occurred
-Transaction Datetime: the timestamp of the transaction in "YYYYmmDD HH:MM:SS" format
-UPC: an integer between 1 and 11 digits representing the food item's product ID
-UPC Type: an integer indicating what type of item is being purchased (standard purchase, coupon scan, credit, etc.).  In these files this will always be 0.
-Price: A decimal number listing the price of the item.
-Net price: A decimal number listing the actual price paid (after any discounts).
-Item quantity: the number of items scanned with the given UPC.
+1. Transaction ID: a 10-digit integer representing the transaction
+
+2. Item Sequence Number: an integer indicating the position of the
+given food item in the transaction.  A transaction ID and an item
+sequence number form a unique value.
+
+3. Reward Card Number: a 19-digit integer representing a customer's
+reward card number
+
+4. Store ID: an integer representing the store where the transaction
+occurred
+
+5. Transaction Datetime: the timestamp of the transaction in "YYYYmmDD
+HH:MM:SS" format
+
+6. UPC: an integer between 1 and 11 digits representing the food
+item's product ID
+
+7. UPC Type: an integer indicating what type of item is being
+purchased (standard purchase, coupon scan, credit, etc.).  In these
+files this will always be 0.
+
+8. Price: A decimal number listing the price of the item.
+
+9. Net price: A decimal number listing the actual price paid (after
+any discounts).
+
+10. Item quantity: the number of items scanned with the given UPC.
+
+
+
+Gojee Product Catalog Data
+
+The file "hackathon_gojee_items.psv" contains the product catalog for
+the items in the transaction data.  Each line represents one item in
+the product catalog, with the following format:
+
+1. UPC: an integer between 1 and 11 digits representing the food
+item's product ID
+
+2. Description: double-quoted string containing a short description of
+the item
+
+3. Size: double-quoted string containing the size and unit measurement
+for the item (for example, " 16 Z" is 16 ounces).  Items that are sold
+by unit rather than with a weight or volume are listed with a "#".
+
+4. Zone 1 Quantity: integer representing availability at stores in zone 1
+
+5. Zone 1 Price: decimal price of the item at stores in zone 1
+
+6. Zone 2 Quantity: integer representing availability at stores in zone 2
+
+7. Zone 2 Price: decimal price of the item at stores in zone 2
+
+8. Zone 3 Quantity: integer representing availability at stores in zone 3
+
+9. Zone 3 Price: decimal price of the item at stores in zone 3
+
+10. Pricing Method: string indicating whether the item is priced by
+unit or by weight
+
+11. COOL: country of origin labeling
+
+12. Department Number: integer representing the department to which
+the item belongs
+
+13. Category: integer listing the category of the item (dairy, meat,
+produce, etc.)
+
+14. Seasonal: string indicating whether the item is seasonal
+(whitespace unless true)
