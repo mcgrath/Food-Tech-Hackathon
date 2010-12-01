@@ -1,0 +1,16 @@
+Gojee Transaction Data
+
+These files represent grocery store transaction data for reward card users.  Each line lists one food item in a
+transaction; a transaction consists of one or more food items.  Food items are in pipe-separated variable format,
+with the following values:
+
+Transaction ID: a 10-digit integer representing the transaction
+Item Sequence Number: an integer indicating the position of the given food item in the transaction.  A transaction ID and an item sequence number form a unique value.
+Reward Card Number: a 19-digit integer representing a customer's reward card number
+Store ID: an integer representing the store where the transaction occurred
+Transaction Datetime: the timestamp of the transaction in "YYYYmmDD HH:MM:SS" format
+UPC: an integer between 1 and 11 digits representing the food item's product ID
+UPC Type: an integer indicating what type of item is being purchased (standard purchase, coupon scan, credit, etc.).  In these files this will always be 0.
+Price: A decimal number listing the price of the item.
+Net price: A decimal number listing the actual price paid (after any discounts).
+Item quantity: the number of items scanned with the given UPC.
